@@ -11,6 +11,7 @@ const methodOverride = require("method-override");
 // Middleware
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride("_method"));
+app.use(express.static(__dirname + "/public"))
 
 
 const characterControllers = require("./controllers/characterControllers");

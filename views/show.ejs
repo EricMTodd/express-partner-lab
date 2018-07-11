@@ -6,6 +6,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<title></title>
 </head>
 <body>
@@ -20,7 +21,7 @@
 	<a href="/characters/<%=index%>/edit">Edit <%=character.name%>'s details</a>
 
 	<form method="POST" action="/characters/<%=index%>?_method=DELETE">
-		<button>Delete <%=character.index%></button>
+		<button>Delete <%=character.name%></button>
 	<br/>
 	</form>
 </body>
