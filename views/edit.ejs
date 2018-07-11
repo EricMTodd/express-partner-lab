@@ -1,0 +1,24 @@
+<%=console.log("edit.ejs is running...");%>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv"X-UA-Compapitable" content="IE=edge">
+	<title></title>
+</head>
+<body>
+	<h1>Edit Characters Page</h1>
+
+	<form method="POST" action="/characters/<%=index%>?_method=PUT%>">
+		Name: <input type="text" name="name" value="<%=character.name%>">
+		Race: <input type="text" name="race" value="<%=character.race%>">
+		Class: <input type="text" name="class" value="<%=character.class%>">
+		<br/>
+		<input type="submit" value="Submit Changes">
+	</form>
+</body>
+</html>
+
+

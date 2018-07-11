@@ -4,17 +4,20 @@ const characters = [
 	{
 		name: "Gideon Schrader",
 		race: "Human",
-		class: "Werewolf"
+		class: "Werewolf",
+		img: ""
 	},
 	{
 		name: "Olivia Voldaren",
 		race: "Human",
-		class: "Vampire"
+		class: "Vampire",
+		img: ""
 	},
 	{
 		name: "Ludevic Einaudi II",
 		race: "Human",
-		class: "Archmage"
+		class: "Archmage",
+		img: ""
 	}
 ];
 

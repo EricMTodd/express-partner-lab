@@ -15,8 +15,10 @@
 		<h3>Race: <%=charactersArray[i].race%></h3>
 		<h3>Class: <%=charactersArray[i].class%></h3>
 		<form method="POST" action="/characters/<%=i%>?_method=DELETE">
-		<button>Delete <%=charactersArray[i].name%></button><br/>
+		<button>Delete <%=charactersArray[i].name%></button>
+		<br/>
 		</form>
+		<a href="/characters/<%=i%>/edit">Edit <%=charactersArray[i].name%>'s details</a>
 	<% } %>
 
 </body>

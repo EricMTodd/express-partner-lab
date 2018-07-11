@@ -30,6 +30,21 @@ app.delete("/characters/:index", (req, res) => {
 });
 
 
+// Edit Route
+app.get("/characters/:index/edit", (req, res) => {
+	res.render("edit.ejs", {
+		character: Characters[req.params.index],
+		index: req.params.index
+	});
+});
+
+app.put("/characters/:index", (req, res) => {
+	Characters[req.params.index] = req.body;
+	res.redirect("/characters/");
+	console.log(Characters);
+});
+
+
 app.listen(3000, () => {
 	console.log("server.js is listening on port 3000");
 });
