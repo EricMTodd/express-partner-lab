@@ -10,6 +10,8 @@
 <body>
 	<h1>Characters Index Page</h1>
 
+	<a href="./new">Create New Character</a>
+
 	<% for (var i = 0; i < charactersArray.length; i++) { %>
 		<h2><a href="<%= i %>"><%=charactersArray[i].name%></a></h2>
 		<a href="/characters/<%=i%>/edit">Edit <%=charactersArray[i].name%>'s details</a>

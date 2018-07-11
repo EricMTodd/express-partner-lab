@@ -22,6 +22,18 @@ app.get("/characters/", (req, res) => {
 });
 
 
+// New Route
+app.get("/characters/new", (req, res) => {
+	res.render("new.ejs");
+});
+
+app.post("/characters/", (req, res) => {
+	Characters.push(req.body);
+	console.log(Characters);
+	res.redirect("/characters/");
+});
+
+
 // Show Route
 app.get("/characters/:index", (req, res) => {
 	res.render("show.ejs", {
