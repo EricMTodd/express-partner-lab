@@ -1,5 +1,3 @@
-# express-partner-lab
-
 # Lab - Delete/Update
 
 ## Morning
