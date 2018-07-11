@@ -22,6 +22,14 @@ app.get("/characters/", (req, res) => {
 });
 
 
+// Delete Route
+app.delete("/characters/:index", (req, res) => {
+	Characters.splice(req.params.index, 1);
+	console.log(Characters);
+	res.redirect("/characters/");
+});
+
+
 app.listen(3000, () => {
 	console.log("server.js is listening on port 3000");
 });

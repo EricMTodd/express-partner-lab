@@ -10,11 +10,14 @@
 <body>
 	<h1>Characters Index Page</h1>
 
-	<% for (var i = 0; i < charactersArray.length; i++) { -%>
+	<% for (var i = 0; i < charactersArray.length; i++) { %>
 		<h2><%=charactersArray[i].name%></h2>
 		<h3>Race: <%=charactersArray[i].race%></h3>
-		<h3>Class: <%=charactersArray[i].class%></h3><br/>
-	<% } -%>
+		<h3>Class: <%=charactersArray[i].class%></h3>
+		<form method="POST" action="/characters/<%=i%>?_method=DELETE">
+		<button>Delete <%=charactersArray[i].name%></button><br/>
+		</form>
+	<% } %>
 
 </body>
 </html>
