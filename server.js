@@ -14,7 +14,12 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(methodOverride("_method"));
 
 
-
+// Index Route
+app.get("/characters/", (req, res) => {
+	res.render("index.ejs", {
+		"charactersArray": Characters
+	});
+});
 
 
 app.listen(3000, () => {
