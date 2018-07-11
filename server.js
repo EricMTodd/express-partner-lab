@@ -22,6 +22,15 @@ app.get("/characters/", (req, res) => {
 });
 
 
+// Show Route
+app.get("/characters/:index", (req, res) => {
+	res.render("show.ejs", {
+		"character": Characters[req.params.index],
+		"index": req.params.index
+	});
+});
+
+
 // Delete Route
 app.delete("/characters/:index", (req, res) => {
 	Characters.splice(req.params.index, 1);
@@ -33,8 +42,8 @@ app.delete("/characters/:index", (req, res) => {
 // Edit Route
 app.get("/characters/:index/edit", (req, res) => {
 	res.render("edit.ejs", {
-		character: Characters[req.params.index],
-		index: req.params.index
+		"character": Characters[req.params.index],
+		"index": req.params.index
 	});
 });
 
