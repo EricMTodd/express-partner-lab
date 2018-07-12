@@ -6,19 +6,20 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv"X-UA-Compapitable" content="IE=edge">
+	<link href="https://fonts.googleapis.com/css?family=Cinzel" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/css/styles.css">
 	<title></title>
 </head>
 <body>
 	<h1>Edit Characters Page</h1>
 
-	<a href="./">Return to Character Index</a>
+	<a href="/characters/">Return to Character Index</a>
 
 	<form method="POST" action="/characters/<%=index%>?_method=PUT%>">
 		Name: <input type="text" name="name" value="<%=character.name%>"><br/>
 		Race: <input type="text" name="race" value="<%=character.race%>"><br/>
 		Class: <input type="text" name="class" value="<%=character.class%>"><br/>
-		Upload Image: <input type="file" name="img" accept="image/*">
+		<!-- Upload Image: <input type="file" name="img" accept="image/*"> -->
 		<br/>
 		<input type="submit" value="Submit Changes">
 	</form>
